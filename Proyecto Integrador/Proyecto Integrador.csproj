@@ -236,6 +236,10 @@
       <Project>{ab8070cb-6499-4358-b02c-c2c0542c7c81}</Project>
       <Name>clases</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DatoCallCenter\DatoCallCenter.csproj">
+      <Project>{6395ffda-758a-420b-9870-c903182f94b7}</Project>
+      <Name>DatoCallCenter</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace clases
 {
-    internal class Estados
+    internal class TiposIncidencias
     {
         public int      Id      { get; set; }
-        public string   Estado  { get; set; }
+        public string   Tipo    { get; set; }
     }
 }

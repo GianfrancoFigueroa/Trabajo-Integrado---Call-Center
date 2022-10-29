@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace clases
 {
-    internal class Estados
+    internal class Preoridades
     {
-        public int      Id      { get; set; }
-        public string   Estado  { get; set; }
+        public int      Id          { get; set; }
+        public string   Preoridad   { get; set; }
     }
 }
+ 

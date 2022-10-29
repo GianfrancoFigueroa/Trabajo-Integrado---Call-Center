@@ -38,9 +38,6 @@ namespace DatoCallCenter
             {
                 datos.cerrarConexion();           
             } 
-            
         }
-        
-
     }
 }

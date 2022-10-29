@@ -14,8 +14,6 @@ namespace clases
         public string   DNI         { get; set; }
         public string   Teléfono    { get; set; }
         public string   Email       { get; set; }
-        public string   Dirección   { get; set; }
-        public string   Localidad   { get; set; }
-        public string   CP          { get; set; }
+        public string   Domicilio   { get; set; }
     }
 }

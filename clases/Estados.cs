@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace clases
 {
-    internal class Estados
+    public class Estados
     {
         public int      Id      { get; set; }
         public string   Estado  { get; set; }

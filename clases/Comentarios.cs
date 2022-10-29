@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace clases
 {
-    internal class Comentarios
+    public class Comentarios
     {
         public int      Id              { get; set; }
         public int      IdIncidencia    { get; set; }

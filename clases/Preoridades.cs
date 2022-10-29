@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace clases
 {
-    internal class Preoridades
+    public class Preoridades
     {
         public int      Id          { get; set; }
         public string   Preoridad   { get; set; }

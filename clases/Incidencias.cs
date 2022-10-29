@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace clases
 {
-    internal class Incidencias
+    public class Incidencias
     {
         public int      Id                  { get; set; }
         public int      NroIncidencias      { get; set; }

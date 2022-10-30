@@ -41,6 +41,7 @@
                 <textarea class="form-control" id="textProblemática" rows="3"></textarea>
             </div>
             <button type="button" class="btn btn-success">Agregar</button>
+            <button type="button" class="btn btn-primary">Modificar</button>
             <button type="button" class="btn btn-danger">Cancelar</button>
 
         </div>

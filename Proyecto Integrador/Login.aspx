@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Proyecto_Integrador.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Proyecto_Integrador.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 
@@ -14,7 +14,7 @@
          <asp:TextBox ID="TxTPass" runat="server"></asp:TextBox>  
       </p>
 
-        <asp:Button ID="Button1" runat="server" Text="Ingresar" />
+        <asp:Button ID="Button1" runat="server" Text="Ingresar" OnClick="Button1_Click" />
 
    
 

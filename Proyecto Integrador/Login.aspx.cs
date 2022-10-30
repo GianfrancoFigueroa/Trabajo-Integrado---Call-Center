@@ -13,5 +13,11 @@ namespace Proyecto_Integrador
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            //Validar usuario si es Tru insgresa, si es folse cartel que indique error de clave
+            HttpContext.Current.Response.Redirect("Incidencia.aspx");
+        }
     }
 }

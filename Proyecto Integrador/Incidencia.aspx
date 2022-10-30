@@ -10,9 +10,11 @@
             IdTipoIncidencia
             IdUsuario       
             Problemática    --%>
+    
     <table>
         <tr> <%-- es una fila --%>
             <td> <%-- columna dentro de la fila --%>
+                <p class="h3 mb-3">Cargar Incidencias Call Center:</p>
                 <div class="row">
                     <div class="col-6">
                         <div class="mb-3">

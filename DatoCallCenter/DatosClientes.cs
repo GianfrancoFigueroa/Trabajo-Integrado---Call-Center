@@ -16,16 +16,18 @@ namespace DatoCallCenter
             AccesoDatos datos= new AccesoDatos();
             try
             {
-                datos.setearQuery("Select Id, Nombre, Apellido,DNI,IdPerf From Usuarios");
+                datos.setearQuery("Select Id,NomClien,ApellClien,DNIClien,Tel,Email,Domicilio From Clientes");
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
-                    Usuarios aux = new Usuarios();
+                    Clientes aux = new Clientes();
                     aux.Id = (int)datos.Lector["Id"];
-                    aux.Nombre = (string)datos.Lector["Nombre"];
-                    aux.Apellido = (string)datos.Lector["Apellido"];
-                    aux.DNI = (string)datos.Lector["DNI"];
-                    aux.IdPerfil = (int)datos.Lector["IdPerf"];
+                    aux.Nombre = (string)datos.Lector["NomClien"];
+                    aux.Apellido = (string)datos.Lector["ApellClien"];
+                    aux.DNI = (string)datos.Lector["DNIClien"];
+                    aux.Teléfono = (string)datos.Lector["Tel"];
+                    aux.Email = (string)datos.Lector["Email"];
+                    aux.Domicilio = (string)datos.Lector["Domicilio"];
                     lista.Add(aux);
                 }
                 return lista;

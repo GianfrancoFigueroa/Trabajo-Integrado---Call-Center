@@ -33,30 +33,30 @@ namespace Proyecto_Integrador
         protected global::System.Web.UI.WebControls.TextBox TextNtocliente;
 
         /// <summary>
-        /// TextIdEstado control.
+        /// ddlEstado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextIdEstado;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEstado;
 
         /// <summary>
-        /// TextIdPreoridad control.
+        /// ddlPreoridad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextIdPreoridad;
+        protected global::System.Web.UI.WebControls.DropDownList ddlPreoridad;
 
         /// <summary>
-        /// TextIdUsuario control.
+        /// DropDownList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextIdUsuario;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
     }
 }

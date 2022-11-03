@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 
-    <asp:GridView ID="GridVClientes" runat="server"></asp:GridView>
+    <asp:GridView ID="GridVClientes" runat="server" CssClass="table table-bordered table-striped-columns"></asp:GridView>
 
 
 

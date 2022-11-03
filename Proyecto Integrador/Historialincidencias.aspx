@@ -3,7 +3,7 @@
 
         <div style="height: 198px">
 
-            <asp:GridView ID="GridIncidencias" runat="server"></asp:GridView>
+            <asp:GridView ID="GridIncidencias" runat="server" CssClass="table table-bordered table-striped-columns"></asp:GridView>
 
         </div>
     

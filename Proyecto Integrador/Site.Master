@@ -86,6 +86,7 @@
 
 
         <div class="container body-content">
+            <hr />
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />

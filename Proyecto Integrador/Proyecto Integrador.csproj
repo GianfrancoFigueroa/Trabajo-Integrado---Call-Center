@@ -146,6 +146,7 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Historialincidencias.aspx" />
     <Content Include="HistorialClientes.aspx" />
+    <Content Include="Inicio.aspx" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
@@ -333,6 +334,13 @@
     </Compile>
     <Compile Include="HistorialClientes.aspx.designer.cs">
       <DependentUpon>HistorialClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

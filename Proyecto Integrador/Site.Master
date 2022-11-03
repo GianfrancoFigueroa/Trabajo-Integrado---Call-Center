@@ -68,7 +68,7 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item"  href="Incidencia.aspx">Nueva incidencia</a></li>
-                  <li><a class="dropdown-item" href="Historialincidencias.aspx">Historial de incidencias</></li>
+                  <li><a class="dropdown-item" href="Historialincidencias.aspx">Historial de incidencias</a></li>
                 </ul>
               </li>
               <li class="nav-item">

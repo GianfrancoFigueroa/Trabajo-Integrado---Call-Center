@@ -1,23 +1,25 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Proyecto_Integrador._Default" %>
 
+
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+
+
+
 
 <div class="mx-auto" style="width: 200px;"> 
 
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <asp:TextBox ID="TxtEmail" TextMode="Email"  class="form-control" runat="server"></asp:TextBox>
             <div id="emailHelp" class="form-text"></div>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+              <asp:TextBox ID="TxtPass" TextMode="Password" class="form-control" runat="server"></asp:TextBox>
           </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+             <asp:Button ID="BtnIngreso" OnClick="BtnIngreso_Click" runat="server" Text="Ingresar" />
+          
 </div>
 
 </asp:Content>

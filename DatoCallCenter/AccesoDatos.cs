@@ -27,6 +27,14 @@ namespace DatoCallCenter
             comando.CommandType=System.Data.CommandType.Text;
             comando.CommandText=query;
         }
+
+
+        public void SetearPARAMETROS(string Parametro, object valor)
+        {
+            comando.Parameters.AddWithValue(Parametro, valor);
+           
+        }
+
         public void ejecutarLectura()
         {
             comando.Connection = conexion;

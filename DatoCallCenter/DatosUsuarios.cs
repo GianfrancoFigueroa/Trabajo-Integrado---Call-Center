@@ -39,5 +39,48 @@ namespace DatoCallCenter
                 datos.cerrarConexion();           
             } 
         }
+
+        private Usuarios aux = null;
+
+        public List<Usuarios> Logueo(Usuarios usuarios)
+        {
+            
+            AccesoDatos datos = new AccesoDatos();
+            List<Usuarios> OBJE = new List<Usuarios>();
+            try
+            {
+                string mail = usuarios.email;
+                datos.setearQuery("Select email, pass From Usuarios where email like '" + "@email" + "' and pass like '" + "@pass" +"'");
+                datos.SetearPARAMETROS("@email", usuarios.email);
+                datos.SetearPARAMETROS("@pass", usuarios.pass);
+
+                datos.ejecutarLectura();
+               
+                while (datos.Lector.Read())
+                {
+                    aux = new Usuarios();
+                    
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Apellido = (string)datos.Lector["Apellido"];
+                    aux.DNI = (Int64)datos.Lector["DNI"];
+                    aux.IdPerfil = (Int16)datos.Lector["IdPerf"];
+                    aux.pass = (string)datos.Lector["pass"];
+                    aux.email = (string)datos.Lector["email"];
+                    OBJE.Add(aux);
+                }
+                return OBJE;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+
     }
 }

@@ -10,7 +10,7 @@ namespace DatoCallCenter
 {
     public class DatosClientes
     {
-        List<Clientes> Listar()
+        public List<Clientes> Listar()
         {
             List<Clientes>lista=new List<Clientes>();
             AccesoDatos datos= new AccesoDatos();
@@ -21,15 +21,15 @@ namespace DatoCallCenter
                 while (datos.Lector.Read())
                 {
                     Clientes aux = new Clientes();
-                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Id = (Int64)datos.Lector["Id"];
                     aux.Nombre = (string)datos.Lector["NomClien"];
                     aux.Apellido = (string)datos.Lector["ApellClien"];
-                    aux.DNI = (string)datos.Lector["DNIClien"];
+                    aux.DNI = (Int64)datos.Lector["DNIClien"];
                     aux.Teléfono = (string)datos.Lector["Tel"];
                     aux.Email = (string)datos.Lector["Email"];
                     aux.Domicilio = (string)datos.Lector["Domicilio"];
                     lista.Add(aux);
-                }
+                } 
                 return lista;
 
             }

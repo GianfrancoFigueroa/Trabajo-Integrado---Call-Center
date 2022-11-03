@@ -11,7 +11,6 @@
      Domicilio
     --%> 
 
-
    <p class="h3 mb-3">Clientes Call Center:</p>
                 <div class="row">
                     <div class="col-6">
@@ -40,15 +39,17 @@
                             <label for="txtDomicilio" class="form-label">Domicilio: </label>
                             <asp:TextBox runat="server" ID="TextBox2" CssClass="form-control" />
                         </div>
+                      
                         <div class="mb-3">
                         <button type="button" class="btn btn-success">Agregar</button>
                         <button type="button" class="btn btn-primary">Modificar</button>
                         <button type="button" class="btn btn-danger">Cancelar</button>
                             
                         </div>
-                        
+                        </div>
 
                     </div>
+                    
 
 
 </asp:Content>

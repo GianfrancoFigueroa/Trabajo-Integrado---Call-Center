@@ -8,7 +8,7 @@ namespace clases
 {
     public class Perfiles
     {
-        public int      Id      { get; set; }
+        public Int16      Id      { get; set; }
         public string   Perfil  { get; set; }
     }
 }

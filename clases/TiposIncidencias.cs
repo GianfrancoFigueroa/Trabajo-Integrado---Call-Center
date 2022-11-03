@@ -8,7 +8,7 @@ namespace clases
 {
     public class TiposIncidencias
     {
-        public int      Id      { get; set; }
+        public Int16      Id      { get; set; }
         public string   Tipo    { get; set; }
     }
 }

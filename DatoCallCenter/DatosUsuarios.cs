@@ -24,15 +24,15 @@ namespace DatoCallCenter
                     aux.Id = (int)datos.Lector["Id"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Apellido = (string)datos.Lector["Apellido"];
-                    aux.DNI = (string)datos.Lector["DNI"];
-                    aux.IdPerfil = (int)datos.Lector["IdPerf"];
+                    aux.DNI = (Int64)datos.Lector["DNI"];
+                    aux.IdPerfil = (Int16)datos.Lector["IdPerf"];
                     lista.Add(aux);
                 }
                 return lista;
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                throw ex;
+                throw;
             }
             finally 
             {

@@ -16,8 +16,14 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
-<body>
+<body class="p-2 m-1  border-0">
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -39,29 +45,46 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                   <%-- <a class="navbar-brand" runat="server" href="~/">Nombre de la aplicación</a> --%> 
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Inicio</a></li>                        
-                        <li><a runat="server" href="~/Incidencia">Incidencia</a></li>
-                        <li><a runat="server" href="~/About">Acerca de</a></li>
-                        <li><a runat="server" href="~/Contact">Contacto</a></li>
-                        <li><a runat="server" href="~/Cliente">Cliente</a></li>
-                        <li><a runat="server" href="~/Login">Salir</a></li>
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
+
+    <nav class="navbar navbar-expand-lg bg-light">
+  
+          <a class="navbar-brand" href="#">CallCenter</a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Inicio</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="true">
+                  Clientes
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="Cliente.aspx">Nuevo clientes</a></li>
+                  <li><a class="dropdown-item" href="HistorialClientes.aspx">Historial de clientes</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Incidencias
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item"  href="Incidencia.aspx">Nueva incidencia</a></li>
+                  <li><a class="dropdown-item" href="Historialincidencias.aspx">Historial de incidencias</></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Contact.aspx">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="About.aspx">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="Default.aspx">Salir</a>
+              </li>
+              </ul>
+ 
+      </nav>
+
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
@@ -72,5 +95,7 @@
         </div>
 
     </form>
+
 </body>
+
 </html>

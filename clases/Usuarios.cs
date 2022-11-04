@@ -15,5 +15,6 @@ namespace clases
         public Int16      IdPerfil    { get; set; }
         public string email { get; set; }
         public string pass { get; set; }
+
     }
 }

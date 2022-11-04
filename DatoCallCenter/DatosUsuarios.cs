@@ -21,7 +21,7 @@ namespace DatoCallCenter
                 while( datos.Lector.Read())
                 {
                     Usuarios aux = new Usuarios();
-                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Id = (Int64)datos.Lector["Id"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Apellido = (string)datos.Lector["Apellido"];
                     aux.DNI = (Int64)datos.Lector["DNI"];
@@ -40,17 +40,16 @@ namespace DatoCallCenter
             } 
         }
 
-        private Usuarios aux = null;
 
-        public List<Usuarios> Logueo(Usuarios usuarios)
+        public bool Logueo(Usuarios usuarios)
         {
-            
+            Usuarios DatoDelUsuario = new Usuarios();
             AccesoDatos datos = new AccesoDatos();
-            List<Usuarios> OBJE = new List<Usuarios>();
+           
             try
             {
-                string mail = usuarios.email;
-                datos.setearQuery("Select email, pass From Usuarios where email like '" + "@email" + "' and pass like '" + "@pass" +"'");
+                
+                datos.setearQuery("Select ID, Nombre, Apellido, DNI, IDPerf From Usuarios where email = @email AND pass = @pass");
                 datos.SetearPARAMETROS("@email", usuarios.email);
                 datos.SetearPARAMETROS("@pass", usuarios.pass);
 
@@ -58,18 +57,19 @@ namespace DatoCallCenter
                
                 while (datos.Lector.Read())
                 {
-                    aux = new Usuarios();
                     
-                    aux.Id = (int)datos.Lector["Id"];
-                    aux.Nombre = (string)datos.Lector["Nombre"];
-                    aux.Apellido = (string)datos.Lector["Apellido"];
-                    aux.DNI = (Int64)datos.Lector["DNI"];
-                    aux.IdPerfil = (Int16)datos.Lector["IdPerf"];
-                    aux.pass = (string)datos.Lector["pass"];
-                    aux.email = (string)datos.Lector["email"];
-                    OBJE.Add(aux);
+                    
+                    usuarios.Id = (Int64)datos.Lector["Id"];
+                    usuarios.Nombre = (string)datos.Lector["Nombre"];
+                    usuarios.Apellido = (string)datos.Lector["Apellido"];
+                    usuarios.DNI = (Int64)datos.Lector["DNI"];
+                    usuarios.IdPerfil = (Int16)datos.Lector["IdPerf"];
+                    ///usuarios.pass = (string)datos.Lector["pass"];
+                    ///usuarios.email = (string)datos.Lector["email"];
+
+                    return true;
                 }
-                return OBJE;
+                return false;
             }
             catch (Exception ex)
             {

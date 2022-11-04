@@ -6,32 +6,31 @@ namespace DatoCallCenter
 {
     public class DatosIncidencias
     {
-        /*
+        
         public List<Incidencias> Listar()
-        { /*
+        { 
             List<Incidencias> lista = new List<Incidencias>();
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearQuery("Select id, idcliente, idestado, idusuario, problematica, comentarios, tipoincidencia, prioridad from incidencia");
+                datos.setearQuery("Select I.ID as 'ID', I.IDcliente as 'IdCliente', E.ID as 'idestado', E.Estados as 'Estado', T.ID as 'IDtipoincidencia', T.TipoInc as 'Tipo Incidencia', P.ID as 'IDprioridad', P.Prioridad as 'Prioridad', I.IDusuario as 'IDusuario', I.Problematica as 'Problematica' from Incidencia I, Clientes C, Estados E , Usuarios U, TipoIncidencia T, prioridad p where C.Id = I.IDcliente and E.Id = I.IDestado and U.ID = I.IDusuario and T.ID = I.TipoIncidencia And P.ID = I.Prioridad");
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
                     Incidencias aux = new Incidencias();
-                    aux.Id = (Int64)datos.Lector["id"];
-                    aux.IdCliente = (Int64)datos.Lector["idcliente"];
+                    aux.Id = (Int64)datos.Lector["ID"];
+                    aux.IdCliente = (int)datos.Lector["IdCliente"];
                     Estados estados = new Estados();
-                    estados.Id = (Int16)datos.Lector["idestado"];
-                    estados.Estado = (string)datos.Lector["estado"];
-                    aux.IdUsuario = (Int64)datos.Lector["idusuario"];
+                    estados.Id = (int)datos.Lector["idestado"];
+                    estados.Estado = (string)datos.Lector["Estado"];
+                    aux.IdUsuario = (Int64)datos.Lector["IDusuario"];
                     TiposIncidencias Tin = new TiposIncidencias();
-                    Tin.Id = (Int16)datos.Lector["IDtipoincidencia"];
-                    Tin.Tipo = (string)datos.Lector["Tipo incidencia"];
+                    Tin.Id = (int)datos.Lector["IDtipoincidencia"];
+                    Tin.Tipo = (string)datos.Lector["Tipo Incidencia"];
                     Prioridades prioridades = new Prioridades();
-                    prioridades.Id = (Int16)datos.Lector["Idprioridad"];
+                    prioridades.Id = (int)datos.Lector["IDprioridad"];
                     prioridades.Preoridad = (string)datos.Lector["Prioridad"];
-                    aux.Problemática = (string)datos.Lector["problematica"];
-                    aux.Comentarios = (string)datos.Lector["comentarios"];
+                    aux.Problemática = (string)datos.Lector["Problematica"];
                     lista.Add(aux);
                 }
                 return lista;
@@ -46,6 +45,6 @@ namespace DatoCallCenter
             }
 
     }
-        */
+        
 }
 }

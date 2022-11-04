@@ -22,13 +22,28 @@ namespace Proyecto_Integrador
 
             DatosUsuarios datosUsuarios = new DatosUsuarios();
             Usuarios Log = new Usuarios();
-            Log.email = TxtEmail.ToString();
-            Log.pass = TxtPass.ToString();
-            if (datosUsuarios.Logueo(Log) != null)
+            
+
+            try
             {
-                Response.Redirect("About.aspx");
+                Log.email = TxtEmail.ToString();
+                Log.pass = TxtPass.ToString();
+                if (datosUsuarios.Logueo(Log) == true)
+                {
+                    Session.Add("User", Log);
+                    Response.Redirect("Inicio.aspx");
+                }
+                else
+                {
+                    Response.Redirect("About.aspx");
+                }
             }
-           
+            catch (Exception ex)
+            {
+
+                throw ex; 
+            }
+            
     }
     }
 }

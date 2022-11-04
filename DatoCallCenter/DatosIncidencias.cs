@@ -18,12 +18,12 @@ namespace DatoCallCenter
                 while (datos.Lector.Read())
                 {
                     Incidencias aux = new Incidencias();
-                    aux.Id = (Int64)datos.Lector["ID"];
+                    aux.Id = (int)datos.Lector["ID"];
                     aux.IdCliente = (int)datos.Lector["IdCliente"];
                     Estados estados = new Estados();
                     estados.Id = (int)datos.Lector["idestado"];
                     estados.Estado = (string)datos.Lector["Estado"];
-                    aux.IdUsuario = (Int64)datos.Lector["IDusuario"];
+                    aux.IdUsuario = (int)datos.Lector["IDusuario"];
                     TiposIncidencias Tin = new TiposIncidencias();
                     Tin.Id = (int)datos.Lector["IDtipoincidencia"];
                     Tin.Tipo = (string)datos.Lector["Tipo Incidencia"];

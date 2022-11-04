@@ -21,11 +21,11 @@ namespace DatoCallCenter
                 while( datos.Lector.Read())
                 {
                     Usuarios aux = new Usuarios();
-                    aux.Id = (Int64)datos.Lector["Id"];
+                    aux.Id = (int)datos.Lector["Id"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Apellido = (string)datos.Lector["Apellido"];
-                    aux.DNI = (Int64)datos.Lector["DNI"];
-                    aux.IdPerfil = (Int16)datos.Lector["IdPerf"];
+                    aux.DNI = (int)datos.Lector["DNI"];
+                    aux.IdPerfil = (int)datos.Lector["IdPerf"];
                     lista.Add(aux);
                 }
                 return lista;
